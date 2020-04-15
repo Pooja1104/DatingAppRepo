@@ -1,0 +1,12 @@
+Object to UI:<input type ="text" [ngModel]="custObj.CustName">
+<br>
+<br>
+Name ui to Objet:
+<input type="text" (input)="custObj.CustName=$event.target.value">
+
+Name:<input type="text" [(ngModel)]="custObj.CustName"> <br/><br/>
+
+Code:<input type="text" [(ngModel)]="custObj.CustCode"> <br/><br/>
+
+{{custObj.CustCode}}
+{{custObj.CustName}}
