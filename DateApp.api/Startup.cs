@@ -54,11 +54,10 @@ namespace DateApp.api
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseHttpsRedirection();
+            
 
             app.UseRouting();
-            // app.UseAuthentication();
-           // app.UseAuthorization();
+           
             
             app.UseCors(x=>x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
