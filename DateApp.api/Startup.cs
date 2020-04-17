@@ -52,12 +52,9 @@ namespace DateApp.api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }
+            }            
 
-            
-
-            app.UseRouting();
-           
+            app.UseRouting();          
             
             app.UseCors(x=>x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
