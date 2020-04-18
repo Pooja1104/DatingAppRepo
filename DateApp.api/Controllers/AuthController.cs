@@ -45,6 +45,7 @@ namespace DateApp.api.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login(UserForLoginDTO userForLoginDTO)
         {
+            throw new Exception("Computer Says no");
            var userFromRepo=await _repo.Login(userForLoginDTO.Username,userForLoginDTO.Password);
            if(userFromRepo==null)
            {
