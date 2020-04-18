@@ -23,6 +23,7 @@ namespace DateApp.api.Controllers
         }
         //Get  api/values
         [HttpGet]
+         [AllowAnonymous]
         public async Task<IActionResult> GetValues()
         {
              var values=  _context.Values.ToListAsync();
