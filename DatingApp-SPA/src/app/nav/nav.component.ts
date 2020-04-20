@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
+import { AlertifyService } from '../_services/alertify.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,7 +9,7 @@ import { AuthService } from '../_services/auth.service';
 })
 export class NavComponent implements OnInit {
 model:any={};
-  constructor(private authservice:AuthService) { }
+  constructor(private authservice:AuthService,private alertify:AlertifyService) { }
 
   ngOnInit() {
     
@@ -17,9 +18,9 @@ model:any={};
   Login()
   {
     this.authservice.login(this.model).subscribe(next=>{
-      console.log("Logged in successfully");
+    this.alertify.success('logged in successfully')
     },error=>{
-      console.log("Failed to Login");
+     this.alertify.error(error);
     })
   }
   loggedIn()
@@ -30,6 +31,6 @@ model:any={};
   logout()
   {
     localStorage.removeItem("token");
-    console.log("Logged Out");
+    this.alertify.message("Logged Out");
   }
 }
