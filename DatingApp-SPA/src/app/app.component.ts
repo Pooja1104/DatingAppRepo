@@ -19,7 +19,7 @@ export class AppComponent implements  OnInit {
       const token=localStorage.getItem('token');
       if(token)
       {
-          this.authservice.decodedToken=this.jwtHelper.decodeToken('token');
+          this.authservice.decodedToken=this.jwtHelper.decodeToken(token);
       }
     }
 
