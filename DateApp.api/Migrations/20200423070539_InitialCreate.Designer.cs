@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DateApp.api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200422174635_ExtendedClass")]
-    partial class ExtendedClass
+    [Migration("20200423070539_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
